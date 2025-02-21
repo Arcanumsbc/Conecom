@@ -5,8 +5,8 @@
   font-display: swap;
   src: local("Lato"),
   local("Lato Regular"),
-  url("../../fonts/lato-bold.woff") format("woff2"),
-  url("../../fonts/lato-bold.woff2") format("woff");
+  url("../fonts/lato-bold.woff") format("woff2"),
+  url("../fonts/lato-bold.woff2") format("woff");
 }
 
 @font-face {
@@ -16,6 +16,6 @@
   font-display: swap;
   src: local("Lato"),
   local("Lato Bold"),
-  url("../../fonts/lato-regular.woff") format("woff2"),
-  url("../../fonts/lato-regular.woff2") format("woff");
+  url("../fonts/lato-regular.woff") format("woff2"),
+  url("../fonts/lato-regular.woff2") format("woff");
 }
