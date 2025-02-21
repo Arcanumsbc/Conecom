@@ -1,0 +1,115 @@
+@use "../mixins" as m;
+
+.video {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  cursor: pointer;
+  min-width: 545px;
+  width: 100%;
+  height: 365px;
+  max-height: 100%;
+
+  @include m.breakpoint-M {
+    min-width: 405.12px;
+    width: 405.12px;
+    min-height: 271.12px;
+    height: auto;
+  }
+
+  @include m.breakpoint-S {
+    min-width: 540.88px;
+    width: 540.88px;
+    min-height: 360px;
+    left: 38px;
+  }
+
+  @include m.breakpoint-XS {
+    min-width: 260px;
+    width: 260px;
+    min-height: 174.13px;
+    height: 174.13px;
+  }
+}
+
+.video img,
+.video iframe {
+  background-color: #6c5f4a;
+  display: flex;
+  border: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 545px;
+  min-height: 365px;
+  width: 100%;
+  height: 100%;
+
+  @include m.breakpoint-M {
+    min-width: 405.12px;
+    width: 405.12px;
+    min-height: 271.12px;
+  }
+
+  @include m.breakpoint-S {
+    min-width: 540.88px;
+    width: 540.88px;
+    min-height: 360px;
+  }
+
+  @include m.breakpoint-XS {
+    margin: 0 auto;
+    min-width: 260px;
+    //width: 260px;
+    width: 100%;
+    min-height: 174.13px;
+    height: 100%;
+  }
+}
+
+.video__button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 67.14px;
+  height: 44.22px;
+  background-color: transparent;
+  border: none;
+  transform: translateX(-50%) translateY(-50%);
+  outline: none;
+  cursor: pointer;
+  touch-action: manipulation;
+  user-select: none;
+  z-index: 2;
+
+  @include m.breakpoint-M {
+    width: 49.9px;
+    height: 32.74px;
+  }
+
+  @include m.breakpoint-S {
+    transform: translateX(-52%) translateY(-50%);
+  }
+  @include m.breakpoint-XS {
+    top: 50%;
+    left: 50%;
+    transform: translateX(-52%) translateY(-52%);
+  }
+}
+
+.video__button svg {
+  position: absolute;
+  transform: translateX(-60%) translateY(-50%);
+  width: 67.14px;
+  height: 44.22px;
+
+  @include m.breakpoint-M {
+    width: 49.9px;
+    height: 32.74px;
+  }
+
+  @include m.breakpoint-XS {
+    width: 32px;
+    height: 21px;
+  }
+}

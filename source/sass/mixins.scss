@@ -1,0 +1,116 @@
+@mixin hover {
+  @media (hover: hover) {
+    &:hover:not(.focus-visible) {
+      @content;
+    }
+  }
+}
+
+@mixin focus {
+  &.focus-visible:focus {
+    @content;
+  }
+}
+
+@mixin active {
+  &:active {
+    @content;
+  }
+}
+
+@mixin disabled {
+  &[disabled] {
+    @content;
+  }
+}
+
+@mixin hover-focus {
+  @media (hover: hover) {
+    &:hover:not(.focus-visible) {
+      @content;
+    }
+  }
+
+  &.focus-visible:focus {
+    @content;
+  }
+}
+
+@mixin text-styles($size, $line-height, $color) {
+  font-family: $ff-arial;
+  font-weight: 400;
+  font-size: $size;
+  line-height: $line-height;
+  letter-spacing: 0;
+  color: $color;
+}
+
+//Desktop first
+
+@mixin breakpoint-L {
+  @media (min-width: 1340px) {
+    @content;
+  }
+}
+
+// Миксин для брейкпоинта M (1020px - 1339px)
+@mixin breakpoint-M {
+  @media (min-width: 1020px) and (max-width: 1339px) {
+    @content;
+  }
+}
+
+// Миксин для брейкпоинта S (700px - 1019px)
+@mixin breakpoint-S {
+  @media (min-width: 700px) and (max-width: 1019px) {
+    @content;
+  }
+}
+
+
+// Миксин для брейкпоинта XS (0 - 699px)
+@mixin breakpoint-XS {
+  @media (max-width: 699px) {
+    @content;
+  }
+}
+
+// Mobile first
+
+// @mixin vp-375 {
+//   @media (min-width: $vp-375) {
+//     @content;
+//   }
+// }
+
+// @mixin vp-768 {
+//   @media (min-width: $vp-768) {
+//     @content;
+//   }
+// }
+
+// @mixin vp-1024 {
+//   @media (min-width: $vp-1024) {
+//     @content;
+//   }
+// }
+
+// @mixin vp-1280 {
+//   @media (min-width: $vp-1280) {
+//     @content;
+//   }
+// }
+
+// @mixin vp-1440 {
+//   @media (min-width: $vp-1440) {
+//     @content;
+//   }
+// }
+
+// @mixin vp-1920 {
+//   @media (min-width: $vp-1920) {
+//     @content;
+//   }
+// }
+
+// ---------------------------------

@@ -1,0 +1,596 @@
+@use "../mixins" as m;
+
+.global-player {
+  display: flex;
+  justify-content: center;
+}
+
+.global-player__container {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #F7EEE5;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1250px;
+  padding: 0 0 120px 0;
+
+  @include m.breakpoint-M {
+    max-width: 930px;
+  }
+
+  @include m.breakpoint-S {
+    max-width: 610px;
+    padding: 34px 0 77px 0;
+  }
+
+  @include m.breakpoint-XS {
+    margin: 0 auto;
+    min-width: 260px;
+    width: 100%;
+    height: 100%;
+    padding: 35px 20px 40px 20px;
+  }
+}
+
+.global-player__header {
+  padding: 0 60px 60px 60px;
+
+  & h2 {
+    font-family: "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 60px;
+    letter-spacing: 0;
+    margin: 0;
+    padding-bottom: 20px;
+    color: #0A3B93;
+    text-transform: uppercase;
+  }
+
+  & p {
+    min-height: 30px;
+    width: 545px;
+    font-family: "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: 0;
+    margin: 0;
+    color: #6C5F4A;
+  }
+
+  @include m.breakpoint-M {
+    padding: 0 40px 33px 40px;
+  }
+
+  @include m.breakpoint-S {
+    padding: 0 20px 47px 20px;
+
+    & h2 {
+      padding-bottom: 15px;
+      font-size: 18px;
+      line-height: 30px;
+    }
+
+    & p {
+      width: 410px;
+      min-height: auto;
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+
+  @include m.breakpoint-XS {
+    padding: 0 0 6px 0;
+
+    & h2 {
+      padding-bottom: 19px;
+      font-size: 18px;
+      line-height: 30px;
+    }
+
+    & p {
+      width: 100%;
+      min-height: auto;
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+}
+
+.global-player__wrapper {
+  width: 100%;
+  max-width: 1130px;
+  margin: 0 auto;
+  padding: 0 60px;
+  z-index: 2;
+
+  @include m.breakpoint-M {
+    max-width: 850px;
+    padding: 0 40px 0 40px;
+  }
+
+  @include m.breakpoint-S {
+    max-width: 544px;
+    padding: 0 20px;
+    margin: 0 0 20px 0;
+  }
+
+  @include m.breakpoint-XS {
+    min-width: 260px;
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+.global-player__list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, auto);
+  gap: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  @include m.breakpoint-M {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+  }
+
+  @include m.breakpoint-S {
+    display: flex;
+    flex-direction: row;
+  }
+
+  @include m.breakpoint-XS {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.global-player__stat,
+.global-player__experience,
+.global-player__direction {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+}
+
+.global-player__stat--big,
+.global-player__experience--big,
+.global-player__direction--big {
+  display: block;
+  position: relative;
+  max-width: 565px;
+
+  .global-player__stat-photo,
+  .global-player__experience-photo,
+  .global-player__direction-photo {
+    display: flex;
+    width: 100%;
+    height: 100%;
+
+    & img {
+      object-fit: fill;
+      width: 565px;
+      min-height: 294px;
+    }
+
+    @include m.breakpoint-M {
+      & img {
+        width: 454px;
+      }
+    }
+
+    @include m.breakpoint-S {
+      & img {
+        object-fit: cover;
+        width: 260px;
+      }
+    }
+
+    @include m.breakpoint-XS {
+      min-height: 294px;
+      height: 100%;
+
+      & img {
+        object-fit: fill;
+        min-width: 260px;
+        width: 100%;
+      }
+    }
+  }
+
+  .global-player__stat-bottom,
+  .global-player__experience-bottom,
+  .global-player__direction-bottom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #8A7B60;
+  }
+
+  .global-player__stat-number,
+  .global-player__experience-number,
+  .global-player__direction-number {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 16px 40px 20px 40px;
+    font-family: "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 18px;
+    letter-spacing: 0;
+    margin: 0;
+    color: #FFFFFF;
+
+    @include m.breakpoint-M {
+      padding: 18px 32px 19px 50px;
+      justify-content: flex-end;
+    }
+
+    @include m.breakpoint-S {
+      font-size: 18px;
+      line-height: 22px;
+      padding: 16px 10px 16px 9px;
+      justify-content: flex-start;
+    }
+
+    @include m.breakpoint-XS {
+      justify-content: center;
+      padding: 16px 20px 20px 20px;
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+
+  .global-player__stat-number {
+    @include m.breakpoint-XS {
+      justify-content: flex-start;
+      padding: 16px 10px 16px 9px;
+    }
+  }
+
+  .global-player__experience-number {
+    @include m.breakpoint-XS {
+      justify-content: flex-start;
+      padding: 16px 10px 16px 9px;
+    }
+  }
+
+  .global-player__direction-number {
+    @include m.breakpoint-XS {
+      justify-content: flex-start;
+      padding: 16px 10px 16px 9px;
+    }
+  }
+
+
+  @include m.breakpoint-S {
+    max-width: 260px;
+  }
+
+  @include m.breakpoint-XS {
+    min-width: 260px;
+    width: 100%;
+    max-width: 100%;
+    max-height: 400px;
+  }
+
+  .global-player__experience-photo {
+    @include m.breakpoint-M {
+      width: 396px;
+    }
+  }
+}
+
+
+.global-player__stat--small,
+.global-player__experience--small,
+.global-player__direction--small {
+  display: flex;
+  width: 294px;
+  max-width: 100%;
+  height: 100%;
+  background-color: #0A3B8E;
+
+  .global-player__stat-photo,
+  .global-player__experience-photo,
+  .global-player__direction-photo {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    & img {
+      width: 294px;
+      height: 240px;
+    }
+
+    @include m.breakpoint-S {
+      max-width: 260px;
+
+      & img {
+        width: 260px;
+      }
+    }
+
+    @include m.breakpoint-XS {
+      & img {
+        object-fit: cover;
+        min-width: 260px;
+        width: 100%;
+      }
+    }
+  }
+
+  .global-player__stat-bottom,
+  .global-player__experience-bottom,
+  .global-player__direction-bottom {
+    position: absolute;
+    bottom: 0;
+    min-height: 54px;
+    width: 100%;
+    background-color: #0A3B8E;
+    font-family: "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 18px;
+    letter-spacing: 0;
+    color: #FFFFFF;
+  }
+
+  .global-player__stat-number,
+  .global-player__experience-number,
+  .global-player__direction-number {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 17px 63px 20px 40px;
+    font-family: "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 18px;
+    letter-spacing: 0;
+    margin: 0;
+    color: #FFFFFF;
+
+    & svg {
+      width: 162px;
+      height: 73px;
+      fill: #FFFFFF;
+    }
+
+    @include m.breakpoint-M {
+      padding: 17px 63px 20px 50px;
+    }
+
+    @include m.breakpoint-S {
+      padding: 16px 10px 16px 9px;
+      justify-content: flex-start;
+    }
+
+    @include m.breakpoint-XS {
+      padding: 16px 10px 16px 9px;
+      justify-content: flex-start;
+    }
+  }
+
+  .global-player__experience-bottom {
+    text-align: center;
+    bottom: 59px;
+
+    @include m.breakpoint-M {
+      bottom: 65px;
+    }
+  }
+
+  .global-player__experience-number {
+    position: relative;
+    top: 55px;
+    padding: 17px 20px;
+    justify-content: center;
+
+    @include m.breakpoint-M {
+      position: relative;
+      top: 49px;
+      padding: 17px 20px;
+      justify-content: center;
+    }
+  }
+
+  .global-player__direction-bottom {
+    text-align: center;
+    bottom: 57px;
+
+    @include m.breakpoint-M {
+      text-align: center;
+      bottom: 65px;
+    }
+  }
+
+  .global-player__direction-number {
+    position: relative;
+    top: 55px;
+    padding: 17px 20px;
+    justify-content: center;
+
+    @include m.breakpoint-M {
+      position: relative;
+      top: 48px;
+      padding: 17px 20px;
+      justify-content: center;
+    }
+  }
+
+  @include m.breakpoint-XS {
+    min-width: 260px;
+    width: 100%;
+    max-width: 100%;
+    min-height: 294px;
+    height: 100%;
+  }
+}
+
+.global-player__experience--small {
+  justify-self: end;
+}
+
+.global-player__bg-vector {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+
+  & svg {
+    width: 260px;
+    height: 416px;
+  }
+
+  @include m.breakpoint-M {
+    right: -91px;
+    top: -4px;
+  }
+
+  @include m.breakpoint-S {
+    display: none;
+  }
+
+  @include m.breakpoint-XS {
+    display: none;
+  }
+}
+
+.global-player__bg-vector-mob {
+  display: none;
+
+  @include m.breakpoint-S {
+    position: absolute;
+    display: flex;
+    right: 0;
+    bottom: 0;
+
+    & svg {
+      width: 142px;
+      height: 81px;
+    }
+  }
+
+  @include m.breakpoint-XS {
+    position: absolute;
+    display: flex;
+    right: 0;
+    bottom: 0;
+
+    & svg {
+      width: 111px;
+      height: 58px;
+    }
+  }
+}
+
+.global-player__bg-vector-left {
+  position: absolute;
+  left: 0;
+  top: 498px;
+  z-index: 1;
+
+  & svg {
+    width: 293px;
+    height: 368px;
+    fill: #FFFFFF;
+  }
+
+  @include m.breakpoint-S {
+    display: none;
+  }
+
+  @include m.breakpoint-XS {
+    display: none;
+  }
+}
+
+.global-player__control {
+  display: none;
+
+  @include m.breakpoint-M {
+    display: none;
+  }
+
+  @include m.breakpoint-S {
+    display: block;
+  }
+
+  @include m.breakpoint-XS {
+    display: block;
+    z-index: 3;
+  }
+}
+
+.global-player__arrows {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.global-player__arrows .arrows__prev {
+  left: 0;
+  top: 138px;
+
+  @include m.breakpoint-XS {
+    left: -16px;
+    top: 123px;
+  }
+}
+
+.global-player__arrows .arrows__next {
+  right: 7px;
+  top: 136px;
+
+  @include m.breakpoint-XS {
+    right: -15px;
+    top: 120px;
+  }
+}
+
+.global-player__pagination.swiper-pagination {
+  display: none;
+
+  @include m.breakpoint-M {
+    display: none;
+  }
+
+  @include m.breakpoint-S {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    bottom: 14.5%;
+    flex-wrap: wrap;
+  }
+
+  @include m.breakpoint-XS {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    gap: 0;
+    top: -411px;
+    left: -5px;
+    flex-wrap: wrap;
+  }
+}
+
+.global-player__pagination .swiper-pagination-bullet {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #8A7B6054;
+  color: #0A3B93;
+  opacity: 0.3;
+}
+
+.global-player__pagination .swiper-pagination-bullet-active {
+  background-color: #0A3B93;
+  opacity: 1;
+}

@@ -1,0 +1,29 @@
+@use "mixins" as m;
+
+// Vendor
+// ---------------------------------
+
+@import "vendor/normalize";
+@import "vendor/swiper";
+
+// Global
+// ---------------------------------
+
+//@import "./variables";
+@import "global/fonts";
+@import "global/utils";
+@import "global/container";
+
+// Blocks
+// ---------------------------------
+
+@import "blocks/main-header";
+@import "blocks/hero";
+@import "blocks/mission";
+@import "blocks/video";
+@import "blocks/advantages";
+@import "blocks/card";
+@import "blocks/arrows";
+@import "blocks/global-player";
+
+// ---------------------------------

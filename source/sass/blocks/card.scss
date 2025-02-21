@@ -1,0 +1,237 @@
+@use "../mixins" as m;
+
+.card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 356px;
+  overflow: hidden;
+
+  @include m.breakpoint-M {
+    width: 260px;
+  }
+
+  @include m.breakpoint-S {
+    min-width: 260px;
+    width: auto;
+    height: 100%;
+  }
+
+  @include m.breakpoint-XS {
+    min-width: 260px;
+    width: 100%;
+  }
+}
+
+.card__image {
+  display: flex;
+  width: 356px;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+
+  & img {
+    object-fit: fill;
+    width: 100%;
+    height: 100%;
+  }
+
+  @include m.breakpoint-M {
+    width: 260px;
+
+    & img {
+      width: 260px;
+    }
+  }
+
+  @include m.breakpoint-S {
+    min-width: 260px;
+    width: 100%;
+    min-height: 178px;
+    height: 100%;
+
+    & img {
+      object-fit: cover;
+      min-width: 260px;
+      width: 100%;
+      min-height: 178px;
+      height: 100%;
+    }
+  }
+
+  @include m.breakpoint-XS {
+    min-width: 260px;
+    width: 100%;
+    min-height: 178px;
+    height: 100%;
+
+    & img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.card__content {
+  background-color: #0A3B93;
+  width: 356px;
+  min-height: 139px;
+
+  & p {
+    min-height: 60px;
+    padding: 20px 20px 53px 20px;
+    font-family: "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0;
+    margin: 0;
+    color: #FFFFFF;
+  }
+
+  @include m.breakpoint-M {
+    width: 260px;
+    min-height: 165px;
+
+    & p {
+      padding: 20px 20px 58px 20px;
+    }
+  }
+
+  @include m.breakpoint-S {
+    width: 260px;
+    min-height: 105px;
+
+    & p {
+      padding: 20px 20px 26px 20px;
+      font-size: 14px;
+    }
+  }
+
+  @include m.breakpoint-XS {
+    min-width: 260px;
+    width: 100%;
+    min-height: 105px;
+    height: 100%;
+
+    & p {
+      padding: 21px 20px 26px 20px;
+      font-size: 14px;
+    }
+  }
+}
+
+.card__button {
+  position: absolute;
+  bottom: 32px;
+  right: 20px;
+  width: 15px;
+  height: 15px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 1;
+  transition: transform 0.3s ease;
+
+  @include m.breakpoint-S {
+    bottom: 27px;
+  }
+
+  @include m.breakpoint-XS {
+    bottom: 26px;
+  }
+}
+
+.card__button-icon::before,
+.card__button-icon::after {
+  content: "";
+  position: absolute;
+  background-color: #FFFFFF;
+}
+
+.card__button-icon::before {
+  width: 100%;
+  height: 2px;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.card__button-icon::after {
+  width: 2px;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.card__overlay {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0A3B93;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: 0.3s ease;
+  z-index: 1;
+
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #0A3B93;
+    border-radius: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #888888;
+    border-radius: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: #555555;
+  }
+}
+
+.card__overlay-text {
+  font-family: "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0;
+  margin: 0;
+  color: #FFFFFF;
+
+  @include m.breakpoint-S {
+    font-size: 14px;
+  }
+}
+
+.card.is-active {
+  min-height: 317px;
+  height: 100%;
+
+  & .card__overlay {
+    top: 0;
+    transition: top 0.3s ease;
+    overflow-y: auto;
+  }
+
+  & .card__content {
+    visibility: hidden;
+  }
+
+  & .card__button {
+    z-index: 2;
+    transition: transform 0.3s ease;
+    transform: rotate(45deg);
+  }
+
+  @include m.breakpoint-S {
+    min-height: 105px;
+  }
+}

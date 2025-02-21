@@ -1,0 +1,349 @@
+@use "../mixins" as m;
+
+.hero {
+  padding: 100px 0 83px 0;
+
+  @include m.breakpoint-M {
+    padding: 80px 0 61px 0;
+  }
+
+  @include m.breakpoint-S {
+    padding: 60px 0 58px 0;
+  }
+
+  @include m.breakpoint-XS {
+    padding: 50px 0 49px;
+  }
+}
+
+.hero__container {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1250px;
+
+  @include m.breakpoint-M {
+    max-width: 930px;
+  }
+
+  @include m.breakpoint-S {
+    max-width: 610px;
+    justify-content: center;
+  }
+
+  @include m.breakpoint-XS {
+    margin: 0 auto;
+    min-width: 260px;
+    width: 100%;
+    max-width: 100%;
+    min-height: 594px;
+    height: 100%;
+  }
+}
+
+.hero__inner {
+  display: flex;
+  flex-direction: row;
+  padding: 0 60px;
+
+  @include m.breakpoint-M {
+    padding: 0 41px;
+  }
+
+  @include m.breakpoint-S {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+
+  @include m.breakpoint-XS {
+    min-width: 260px;
+    width: 100%;
+    flex-direction: column;
+    padding: 0 30px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    margin-top: auto;
+  }
+}
+
+.hero__media {
+  margin: 37px 40px 0 0;
+
+  @include m.breakpoint-M {
+    margin: 61px 26px 0 0;
+  }
+
+  @include m.breakpoint-S {
+    margin: 54px 0 0 0;
+    order: 2;
+  }
+
+  @include m.breakpoint-XS {
+    display: flex;
+    justify-content: center;
+    margin: 47px 0 0 0;
+    order: 2;
+  }
+}
+
+.hero__media-wrapper {
+  position: relative;
+  display: flex;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #F7EEE5;
+    top: -37px;
+    left: -35px;
+    z-index: -1;
+
+    @include m.breakpoint-M {
+      top: -27px;
+      left: -41px;
+    }
+
+    @include m.breakpoint-S {
+      width: 520.88px;
+      height: 380.07px;
+      top: -41px;
+      left: -31px;
+    }
+
+    @include m.breakpoint-XS {
+      position: absolute;
+      min-width: 26px;
+      width: 100%;
+      min-height: 184px;
+      height: 100%;
+      top: -20px;
+      left: -25px;
+    }
+  }
+
+  .hero__media-watch {
+    position: absolute;
+    width: 101px;
+    height: 38px;
+    z-index: 2;
+    right: 118px;
+    top: 19.74px;
+
+    @include m.breakpoint-M {
+      width: 57.95px;
+      height: 29.08px;
+      top: 14.74px;
+      right: 103px;
+
+      & svg {
+        width: 57.95px;
+        height: 29.08px;
+      }
+    }
+
+    @include m.breakpoint-S {
+      right: 115px;
+    }
+
+    @include m.breakpoint-XS {
+      width: 37.19px;
+      height: 21.66px;
+      top: 5%;
+      right: 26%;
+      justify-items: flex-end;
+
+      & svg {
+        width: 37.19px;
+        height: 21.66px;
+      }
+    }
+  }
+
+  .hero__media-share {
+    position: absolute;
+    width: 76px;
+    height: 36px;
+    z-index: 2;
+    right: 30px;
+    top: 20.58px;
+
+    @include m.breakpoint-M {
+      width: 54.88px;
+      height: 26.53px;
+      top: 14.58px;
+      right: 22px;
+
+      & svg {
+        width: 54.88px;
+        height: 26.53px;
+      }
+    }
+
+    @include m.breakpoint-S {
+      right: 28px;
+    }
+
+    @include m.breakpoint-XS {
+      width: 35px;
+      height: 17px;
+      top: 5%;
+      right: 6%;
+
+      & svg {
+        width: 35px;
+        height: 17px;
+      }
+    }
+  }
+
+  .hero__media-watch-yt {
+    position: absolute;
+    width: 184px;
+    height: 41px;
+    z-index: 2;
+    left: 9px;
+    bottom: 0;
+
+    & svg {
+      width: 184px;
+      height: 41px;
+    }
+
+    @include m.breakpoint-M {
+      width: 136.8px;
+      height: 30.52px;
+      left: 0;
+
+      & svg {
+        width: 136.8px;
+        height: 30.52px;
+      }
+    }
+
+    @include m.breakpoint-S {
+      left: 0;
+    }
+
+    @include m.breakpoint-XS {
+      width: 89px;
+      height: 19.59px;
+      left: 0;
+      bottom: 0;
+      justify-items: flex-end;
+
+      & svg {
+        width: 89px;
+        height: 19.59px;
+      }
+    }
+  }
+
+  @include m.breakpoint-S {
+    justify-content: flex-end;
+  }
+}
+
+.hero__content {
+  width: 545px;
+
+  & h2 {
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 30px;
+    letter-spacing: 0;
+    margin: 0;
+    padding-top: 15px;
+    padding-bottom: 32px;
+    color: #0A3B93;
+  }
+
+  & p {
+    font-family: "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: 0;
+    margin: 0;
+    padding-bottom: 16px;
+    color: #6C5F4A;
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+
+  @include m.breakpoint-M {
+    width: 417px;
+  }
+
+  @include m.breakpoint-S {
+    width: 569px;
+    padding: 0 10px 15px 10px;
+
+    & h2 {
+      font-size: 11px;
+      line-height: 11px;
+      padding-top: 5px;
+      padding-bottom: 19px;
+    }
+
+    & p {
+      font-size: 14px;
+      line-height: 20px;
+      padding-bottom: 11px;
+
+      & span {
+        display: block;
+      }
+    }
+  }
+
+  @include m.breakpoint-XS {
+    min-width: 260px;
+    width: 100%;
+
+    & h2 {
+      min-width: 260px;
+      font-size: 11px;
+      line-height: 18px;
+      padding: 5px 0 23px 0;
+    }
+
+    & p {
+      font-size: 14px;
+      line-height: 20px;
+      padding-bottom: 11px;
+
+      & span {
+        display: flex;
+      }
+    }
+  }
+}
+
+.hero__header {
+  & svg {
+    width: 148px;
+    height: 66px;
+    fill: #8A7B60;
+  }
+
+  @include m.breakpoint-S {
+    & svg {
+      width: 71px;
+      height: 30.77px;
+    }
+  }
+
+  @include m.breakpoint-XS {
+    & svg {
+      width: 71px;
+      height: 32px;
+    }
+  }
+}

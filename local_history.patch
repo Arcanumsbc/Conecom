@@ -1,0 +1,24 @@
+Index: source/sass/blocks/accordion.scss
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/source/sass/blocks/accordion.scss b/source/sass/blocks/accordion.scss
+--- a/source/sass/blocks/accordion.scss	
++++ b/source/sass/blocks/accordion.scss	(date 1739960417196)
+@@ -6,6 +6,15 @@
+ //  //border-top: 1px solid rgba(#, 0.2);
+ //}
+ 
++.advantages__list {
++  margin: 0;
++  padding: 0;
++  display: grid;
++  grid-template-columns: repeat(3, 1fr);
++
++  gap: 30px 32px;
++}
++
+ .advantages__title[data-accordion="element"].is-active {
+   [data-accordion="button"] {
+ 

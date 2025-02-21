@@ -1,0 +1,444 @@
+@use "../mixins" as m;
+
+.mission {
+  z-index: -1;
+}
+
+.mission__container {
+  display: flex;
+  padding: 0;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1250px;
+  background-color: #F7EEE5;
+
+
+  @include m.breakpoint-M {
+    max-width: 930px;
+  }
+
+  @include m.breakpoint-S {
+    max-width: 610px;
+  }
+
+  @include m.breakpoint-XS {
+    margin: 0 auto;
+    min-width: 290px;
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+.mission__wrapper-top {
+  background-color: #0A3B93;
+  margin-top: 16px;
+  position: relative;
+  padding: 0 60px;
+  z-index: 2;
+
+  .mission__header-bg-vector {
+    position: absolute;
+    right: -27px;
+    bottom: -6px;
+    z-index: 3;
+
+    & svg {
+      width: 459px;
+      height: 173px;
+      fill: #2A5EBC;
+    }
+
+    @include m.breakpoint-M {
+      display: none;
+      right: 0;
+      bottom: -2px;
+    }
+
+    @include m.breakpoint-S {
+      display: none;
+      right: -12px;
+      bottom: -9px;
+
+      & svg {
+        width: 190px;
+        height: 135px;
+      }
+    }
+
+    @include m.breakpoint-XS {
+      display: none;
+    }
+  }
+
+  .mission__header-bg-vector-m {
+    display: none;
+
+    @include m.breakpoint-M {
+      display: flex;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      z-index: 3;
+
+      & svg {
+        width: 151px;
+        height: 176px;
+        fill: #2A5EBC;
+      }
+    }
+
+    @include m.breakpoint-S {
+      display: none;
+    }
+
+    @include m.breakpoint-XS {
+      display: none;
+
+    }
+  }
+
+  .mission__header-bg-vector-tablet {
+    display: none;
+
+    @include m.breakpoint-M {
+      display: none;
+    }
+
+    @include m.breakpoint-S {
+      position: absolute;
+      display: flex;
+      z-index: 3;
+      right: 0;
+      bottom: 0;
+
+      & svg {
+        width: 177px;
+        height: 97px;
+        fill: #2A5EBC;
+      }
+    }
+
+    @include m.breakpoint-XS {
+      position: absolute;
+      display: flex;
+      z-index: 3;
+      right: 0;
+      bottom: 0;
+
+      & svg {
+        width: 128px;
+        height: 66px;
+        fill: #2A5EBC;
+      }
+    }
+  }
+
+  @include m.breakpoint-M {
+    padding: 0 40px;
+    margin-top: 16px;
+  }
+
+  @include m.breakpoint-S {
+    padding: 0 20px;
+    margin-top: 0;
+  }
+
+  @include m.breakpoint-XS {
+    display: flex;
+    padding: 0 15px;
+    margin-top: 0;
+    justify-content: center;
+  }
+}
+
+.mission__header {
+  margin: 94px 0 93px 0;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  z-index: 4;
+
+  .mission__header-arrow {
+    & svg {
+      width: 47px;
+      height: 60px;
+      fill: #FFFFFF;
+    }
+
+    @include m.breakpoint-S {
+      & svg {
+        width: 22px;
+        height: 28px;
+        transform: translateY(5px);
+      }
+    }
+
+    @include m.breakpoint-XS {
+      & svg {
+        width: 22px;
+        height: 28px;
+        transform: translateX(4px) translateY(2px);
+      }
+    }
+  }
+
+  & h3 {
+    max-width: 678px;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: 0;
+    margin: 0;
+    color: #FFFFFF;
+    padding-left: 38px;
+  }
+
+  @include m.breakpoint-S {
+    margin: 32px 0 32px 0;
+
+    & h3 {
+      padding-left: 26px;
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+
+  @include m.breakpoint-XS {
+    min-width: 260px;
+    width: 100%;
+    max-width: 400px;
+    margin: 0;
+    padding: 32px 0 32px 0;
+
+    & h3 {
+      padding-left: 10px;
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+}
+
+.mission__bottom {
+  min-height: 437px;
+  width: 100%;
+  position: relative;
+
+  @include m.breakpoint-S {
+    min-height: 275px;
+  }
+
+  @include m.breakpoint-S {
+    min-height: 275px;
+  }
+
+  @include m.breakpoint-XS {
+    min-height: 275px;
+  }
+}
+
+.mission__bottom__bg-photo {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  position: absolute;
+
+  & img {
+    object-fit: fill;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.mission__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 3;
+  position: relative;
+  padding: 82px 0 101px 0;
+  margin: 0 auto;
+
+  & a {
+    width: 250px;
+    padding: 20px 16px;
+    background-color: #FFFFFF;
+    font-family: "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0;
+    text-align: center;
+    color: #0A3B93;
+    text-decoration: none;
+  }
+
+  @include m.breakpoint-M {
+    padding: 87px 0 101px 0;
+  }
+
+  @include m.breakpoint-S {
+    padding: 57px 0 56px 0;
+
+    & a {
+      width: 109px;
+      padding: 10px 31px;
+      font-size: 14px;
+    }
+  }
+
+  @include m.breakpoint-XS {
+    padding: 29px 15px 56px 15px;
+
+    & a {
+      font-size: 18px;
+      line-height: 28px;
+      width: 149px;
+      padding: 10px 24px;
+    }
+  }
+}
+
+.mission__title {
+  padding-bottom: 40px;
+
+  & h3 {
+    width: 643px;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 80px;
+    letter-spacing: 0;
+    margin: 0;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    position: relative;
+    text-align: center;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 66px;
+      left: 0;
+      top: 36px;
+      height: 4px;
+      background-color: #FFFFFF;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 66px;
+      right: 0;
+      top: 36px;
+      height: 4px;
+      background-color: #FFFFFF;
+    }
+  }
+
+  @include m.breakpoint-M {
+    padding-bottom: 31px;
+  }
+
+  @include m.breakpoint-S {
+    padding-bottom: 18px;
+
+    & h3 {
+      width: 349px;
+      text-align: center;
+      font-size: 30px;
+      line-height: 46px;
+
+      &::before {
+        width: 15px;
+        left: 0;
+        top: 19px;
+        height: 1px;
+      }
+
+      &::after {
+        width: 15px;
+        left: 490px;
+        top: 19px;
+        height: 1px;
+      }
+    }
+  }
+
+  @include m.breakpoint-XS {
+    padding-bottom: 3px;
+
+    & h3 {
+      width: 238px;
+      text-align: center;
+      font-size: 18px;
+      line-height: 46px;
+
+      &::before {
+        width: 15px;
+        left: 0;
+        top: 19px;
+        height: 1px;
+      }
+
+      &::after {
+        width: 15px;
+        left: 223px;
+        top: 19px;
+        height: 1px;
+      }
+    }
+  }
+}
+
+.mission__text {
+  padding-bottom: 38px;
+
+  & p {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0;
+    margin: 0;
+    color: #FFFFFF;
+    text-transform: uppercase;
+  }
+
+  @include m.breakpoint-M {
+    width: 582px;
+    padding-bottom: 34px;
+
+    & p {
+      text-align: center;
+      line-height: 30px;
+    }
+  }
+
+  @include m.breakpoint-S {
+    width: 428px;
+    padding-bottom: 10px;
+
+    & p {
+      font-size: 16px;
+      line-height: 20px;
+      text-align: center;
+    }
+  }
+
+  @include m.breakpoint-XS {
+    min-width: 260px;
+    width: 100%;
+    max-width: 500px;
+    padding-bottom: 29px;
+
+    & p {
+      font-size: 16px;
+      line-height: 20px;
+      text-align: center;
+    }
+  }
+}

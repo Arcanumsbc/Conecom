@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="./img/favicons/apple-touch-icon.png">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="preload" href="./fonts/lato-bold.woff2" as="font"
+        type="font/woff2"
+        crossorigin="anonymous">
+  <link rel="preload" href="./fonts/lato-regular.woff2" as="font"
+        type="font/woff2"
+        crossorigin="anonymous">
+  <meta name="description"
+        content="Российское подразделение французской группы DuffBeer">
+  <title>Conecom</title>
+  <link rel="stylesheet" href="./css/style.min.css">
+</head>
+<body>
+<div class="wrapper">
+  <!-- header -->
+  <header class="main-header" id="top" data-header="data-header">
+    <div class="main-header__container container">
+      <picture class="main-header__bg-photo">
+        <!-- WebP для больших экранов (1340px и выше) -->
+        <source
+          media="(min-width: 1340px)"
+          srcset="
+      ./img/header/header_background-desk.webp 1x,
+      ./img/header/header_background-desk@2x.webp 2x"
+          type="image/webp"
+        >
+        <source
+          media="(min-width: 1340px)"
+          srcset="
+      ./img/header/header_background-desk.jpg 1x,
+      ./img/header/header_background-desk@2x.jpg 2x"
+          type="image/jpeg"
+        >
+
+        <!-- WebP для средних экранов (1020px и выше) -->
+        <source
+          media="(min-width: 1020px)"
+          srcset="
+      ./img/header/header_background-desk-m.webp 1x,
+      ./img/header/header_background-desk-m@2x.webp 2x"
+          type="image/webp"
+        >
+        <source
+          media="(min-width: 1020px)"
+          srcset="
+      ./img/header/header_background-desk-m.jpg 1x,
+      ./img/header/header_background-desk-m@2x.jpg 2x"
+          type="image/jpeg"
+        >
+
+        <!-- WebP для планшетов (700px и выше) -->
+        <source
+          media="(min-width: 700px)"
+          srcset="
+      ./img/header/header_background-tablet.webp 1x,
+      ./img/header/header_background-tablet@2x.webp 2x"
+          type="image/webp"
+        >
+        <source
+          media="(min-width: 700px)"
+          srcset="
+      ./img/header/header_background-tablet.jpg 1x,
+      ./img/header/header_background-tablet@2x.jpg 2x"
+          type="image/jpeg"
+        >
+
+        <!-- WebP для мобильных устройств (по умолчанию) -->
+        <source
+          srcset="
+      ./img/header/header_background-mobile.webp 1x,
+      ./img/header/header_background-mobile@2x.webp 2x"
+          type="image/webp"
+        >
+        <source
+          srcset="
+      ./img/header/header_background-mobile.jpg 1x,
+      ./img/header/header_background-mobile@2x.jpg 2x"
+          type="image/jpeg"
+        >
+
+        <!-- Fallback для браузеров, которые не поддерживают <picture> или WebP -->
+        <img src="./img/header/header_background-desk.jpg"
+             srcset="./img/header/header_background-desk@2x.jpg 2x"
+             alt="Фон header" width="1250"
+             height="599" loading="lazy">
+      </picture>
+      <div class="main-header__wrapper">
+        <div class="main-header__logo">
+          <a class="main-header__logo-link" href="#top"
+             aria-label="Логотип сайта LogoIpSum.">
+            <svg width="240.13" height="30.62" aria-hidden="true">
+              <use xlink:href="./img/sprite.svg#logo"></use>
+            </svg>
+          </a>
+        </div>
+        <h1 class="visually-hidden">Conecom российское подразделение
+          французской группы DuffBeer</h1>
+        <h2>Conecom</h2>
+        <p>российское подразделение французской группы DuffBeer</p>
+      </div>
+      <span class="main-header__bg-vector">
+        <svg width="363" height="368" aria-hidden="true">
+              <use xlink:href="./img/sprite.svg#header-vector"></use>
+            </svg>
+      </span>
+    </div>
+  </header>
+  <main>
+    <!--hero block-->
+    <section class="hero">
+      <div class="hero__container container">
+        <div class="hero__inner">
+          <div class="hero__media" data-video="is-enabled">
+            <div class="hero__media-wrapper video">
+               <span class="hero__media-watch">
+                 <svg width="82" height="38" aria-hidden="true">
+                  <use xlink:href="./img/sprite.svg#watch"></use>
+                 </svg>
+               </span>
+              <span class="hero__media-share">
+                          <svg width="76" height="35.29" aria-hidden="true">
+                            <use xlink:href="./img/sprite.svg#share"></use>
+                          </svg>
+                        </span>
+              <picture data-prew>
+                <img src="./img/hero/hero-video-desk.jpg"
+                     srcset="./img/hero/hero-video-desk@2x.jpg 2x"
+                     alt="Видео-презентация" width="545"
+                     height="365" loading="lazy">
+              </picture>
+              <button class="video__button" type="button" aria-label="play">
+                <svg width="68" height="44" aria-hidden="true">
+                  <use xlink:href="./img/sprite.svg#icon-play"></use>
+                </svg>
+              </button>
+              <span class="hero__media-watch-yt">
+                          <svg width="184" height="41" aria-hidden="true">
+                            <use xlink:href="./img/sprite.svg#watch-yt"></use>
+                          </svg>
+                        </span>
+            </div>
+          </div>
+          <div class="hero__content">
+              <span class="hero__header">
+                <svg width="148" height="66" aria-hidden="true">
+                  <use xlink:href="./img/sprite.svg#167-hero"></use>
+                </svg>
+              </span>
+            <h2>лет нашего опыта</h2>
+            <p>DuffBeer — один из мировых лидеров по производству дрожжей и
+              других
+              продуктов ферментации. И нам нужна сильная команда профессионалов
+              и
+              единомышленников, которые будут стремиться развиваться вместе с
+              DuffBeer. </p>
+            <p>
+              Мы всегда рады принять талантливых и&nbsp;целеустремленных людей в
+              нашу
+              дружную команду! Мы ценим каждого своего сотрудника и стремимся
+              предоставить всем равные возможности в развитии
+              <span>и совершенств.</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--    mission block-->
+    <section class="mission">
+      <div class="mission__container container">
+        <div class="mission__wrapper-top">
+          <span class="mission__header-bg-vector">
+                  <svg width="437" height="173"
+                       aria-hidden="true">
+                    <use xlink:href="./img/sprite.svg#mission-vector"></use>
+                  </svg>
+              </span>
+          <span class="mission__header-bg-vector-m">
+                  <svg width="151" height="176"
+                       aria-hidden="true">
+                    <use xlink:href="./img/sprite.svg#mission-vector-m"></use>
+                  </svg>
+              </span>
+          <span class="mission__header-bg-vector-tablet">
+                  <svg width="177" height="97"
+                       aria-hidden="true">
+                    <use
+                      xlink:href="./img/sprite.svg#mission-vector-tablet"></use>
+                  </svg>
+              </span>
+          <div class="mission__header">
+                <span class="mission__header-arrow">
+                  <svg width="47" height="60"
+                       aria-hidden="true">
+                    <use xlink:href="./img/sprite.svg#arrow"></use>
+                  </svg>
+                </span>
+            <h3>
+              Каждое 3-е хлебобулочное изделие в мире произведено с&nbsp;использованием
+              продукции DuffBeer
+            </h3>
+          </div>
+        </div>
+        <div class="mission__wrapper-bottom">
+          <div class="mission__bottom">
+            <picture class="mission__bottom__bg-photo">
+              <!-- WebP для больших экранов (1340px и выше) -->
+              <source
+                media="(min-width: 1340px)"
+                srcset="
+                ./img/mission/mission-desk.webp 1x,
+                ./img/mission/mission-desk@2x.webp 2x"
+                type="image/webp"
+              >
+              <source
+                media="(min-width: 1340px)"
+                srcset="
+                ./img/mission/mission-desk.jpg 1x,
+                ./img/mission/mission-desk@2x.jpg 2x"
+                type="image/jpeg"
+              >
+
+              <!-- WebP для средних экранов (1020px и выше) -->
+              <source
+                media="(min-width: 1020px)"
+                srcset="
+                ./img/mission/mission-m.webp 1x,
+                ./img/mission/mission-m@2x.webp 2x"
+                type="image/webp"
+              >
+              <source
+                media="(min-width: 1020px)"
+                srcset="
+                ./img/mission/mission-m.jpg 1x,
+                ./img/mission/mission-m@2x.jpg 2x"
+                type="image/jpeg"
+              >
+
+              <!-- WebP для планшетов (700px и выше) -->
+              <source
+                media="(min-width: 700px)"
+                srcset="
+                ./img/mission/mission-tablet.webp 1x,
+                ./img/mission/mission-tablet@2x.webp 2x"
+                type="image/webp"
+              >
+              <source
+                media="(min-width: 700px)"
+                srcset="
+                ./img/mission/mission-tablet.jpg 1x,
+                ./img/mission/mission-tablet@2x.jpg 2x"
+                type="image/jpeg"
+              >
+
+              <!-- WebP для мобильных устройств (по умолчанию) -->
+              <source
+                srcset="
+                ./img/mission/mission-mobile.webp 1x,
+                ./img/mission/mission-mobile@2x.webp 2x"
+                type="image/webp"
+              >
+              <source
+                srcset="
+              ./img/mission/mission-mobile.jpg 1x,
+              ./img/mission/mission-mobile@2x.jpg 2x"
+                type="image/jpeg"
+              >
+              <img src="./img/mission/mission-desk.jpg"
+                   srcset="./img/mission/mission-desk@2x.jpg 2x"
+                   alt="Фон блока миссия" width="1250"
+                   height="437" loading="lazy">
+            </picture>
+            <div class="mission__inner">
+              <div class="mission__title">
+                <h3>МИССИЯ DuffBeer</h3>
+              </div>
+              <div class="mission__text">
+                <p>работать вместе, чтобы лучше накормить и&nbsp;сохранить
+                  планету</p>
+              </div>
+              <a href="#" target="_blank">Перейти на сайт</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--advantages  block-->
+    <section class="advantages">
+      <div class="advantages__container container">
+        <div class="advantages__header">
+          <h2>
+            Наши преимущества
+          </h2>
+        </div>
+        <div class="advantages__control">
+          <div class="advantages__arrows arrows" data-nojs="no-js">
+            <button class="advantages__arrows-prev arrows__prev">
+              <svg width="10" height="10"
+                   aria-label="Перейти к предыдущему слайду">
+                <use xlink:href="./img/sprite.svg#icon-arrow"></use>
+              </svg>
+            </button>
+            <button class="advantages__arrows-next arrows__next">
+              <svg width="10" height="10"
+                   aria-label="Перейти к следующему слайду">
+                <use xlink:href="./img/sprite.svg#icon-arrow"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="advantages__wrapper">
+          <div class="advantages__slider swiper">
+            <ul class="advantages__list swiper-wrapper">
+              <li class="advantages__item swiper-slide">
+                <div class="advantages__card card">
+                  <picture class="card__image">
+                    <!-- WebP для больших экранов (1340px и выше) -->
+                    <source
+                      media="(min-width: 1340px)"
+                      srcset="
+                          ./img/advantages/confidence.webp 1x,
+                          ./img/advantages/confidence@2x.webp 2x"
+                      type="image/webp"
+                    >
+                    <source
+                      media="(min-width: 1340px)"
+                      srcset="
+                          ./img/advantages/confidence.jpg 1x,
+                           ./img/advantages/confidence@2x.jpg 2x"
+                      type="image/jpeg"
+                    >
+
+                    <!-- WebP для средних экранов (1020px и выше) -->
+                    <source
+                      media="(min-width: 1020px)"
+                      srcset="
+                          ./img/advantages/confidence-m.webp 1x,
+                          ./img/advantages/confidence-m@2x.webp 2x"
+                      type="image/webp"
+                    >
+                    <source
+                      media="(min-width: 1020px)"
+                      srcset="
+                          ./img/advantages/confidence-m.jpg 1x,
+                          ./img/advantages/confidence-m@2x.jpg 2x"
+                      type="image/jpeg"
+                    >
+
+                    <img src="./img/advantages/confidence.jpg"
+                         srcset="./img/advantages/confidence@2x.jpg 2x"
+                         alt="Видео-презентация" width="356"
+                         height="178" loading="lazy">
+                  </picture>
+                  <div class="card__content">
+                    <p>Уверенность в&nbsp;завтрашнем дне</p>
+                  </div>
+                  <div class="card__button">
+                    <span class="card__button-icon"></span>
+                  </div>
+                  <div class="card__overlay">
+                    <p class="card__overlay-text">ООО «Conecom», российское
+                      подразделение французского концерна DuffBeer. Мы
+                      компания,
+                      которая честно ведет свой бизнес на территории РФ,
+                      соблюдая законодательство и гарантируя стабильность и
+                      уверенность в завтрашнем дне.
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li class="advantages__item swiper-slide">
+                <div class="advantages__card card">
+                  <picture class="card__image">
+                    <!-- WebP для больших экранов (1340px и выше) -->
+                    <source
+                      media="(min-width: 1340px)"
+                      srcset="
+                            ./img/advantages/safety.webp 1x,
+                            ./img/advantages/safety@2x.webp 2x"
+                      type="image/webp"
+                    >
+                    <source
+                      media="(min-width: 1340px)"
+                      srcset="
+                            ./img/advantages/safety.jpg 1x,
+                            ./img/advantages/safety@2x.jpg 2x"
+                      type="image/jpeg"
+                    >
+
+                    <!-- WebP для средних экранов (1020px и выше) -->
+                    <source
+                      media="(min-width: 1020px)"
+                      srcset="
+                            ./img/advantages/safety-m.webp 1x,
+                             ./img/advantages/safety-m@2x.webp 2x"
+                      type="image/webp"
+                    >
+                    <source
+                      media="(min-width: 1020px)"
+                      srcset="
+                            ./img/advantages/safety-m.jpg 1x,
+                            ./img/advantages/safety-m@2x.jpg 2x"
+                      type="image/jpeg"
+                    >
+                    <img src="./img/advantages/safety.jpg"
+                         srcset="./img/advantages/safety@2x.jpg 2x"
+                         alt="Видео-презентация" width="356"
+                         height="178" loading="lazy">
+                  </picture>
+                  <div class="card__content">
+                    <p>Безопасность на рабочем месте – приоритет №1</p>
+                  </div>
+                  <div class="card__button">
+                    <span class="card__button-icon"></span>
+                  </div>
+                  <div class="card__overlay">
+                    <p class="card__overlay-text">Вопросам безопасности и
+                      качества пищевой продукции в нашей компании уделяется
+                      повышенное внимание. Все производства группы DuffBeer в
+                      России постоянно работают над улучшением процессов и
+                      стремятся сделать все возможное, чтобы рабочий процесс
+                      был
+                      максимально безопасным и комфортным.
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li class="advantages__item swiper-slide">
+                <div class="advantages__card card">
+                  <picture class="card__image">
+                    <!-- WebP для больших экранов (1340px и выше) -->
+                    <source
+                      media="(min-width: 1340px)"
+                      srcset="
+                            ./img/advantages/stability.webp 1x,
+                            ./img/advantages/stability@2x.webp 2x"
+                      type="image/webp"
+                    >
+                    <source
+                      media="(min-width: 1340px)"
+                      srcset="
+                            ./img/advantages/stability.jpg 1x,
+                            ./img/advantages/stability@2x.jpg 2x"
+                      type="image/jpeg"
+                    >
+
+                    <!-- WebP для средних экранов (1020px и выше) -->
+                    <source
+                      media="(min-width: 1020px)"
+                      srcset="
+                            ./img/advantages/stability-m.webp 1x,
+                             ./img/advantages/stability-m@2x.webp 2x"
+                      type="image/webp"
+                    >
+                    <source
+                      media="(min-width: 1020px)"
+                      srcset="
+                            ./img/advantages/stability-m.jpg 1x,
+                            ./img/advantages/stability-m@2x.jpg 2x"
+                      type="image/jpeg"
+                    >
+                    <img src="./img/advantages/stability.jpg"
+                         srcset="./img/advantages/stability@2x.jpg"
+                         alt="Видео-презентация" width="356"
+                         height="178" loading="lazy">
+                  </picture>
+                  <div class="card__content">
+                    <p>Стабильная заработная<br>плата
+                    </p>
+                  </div>
+                  <div class="card__button">
+                    <span class="card__button-icon"></span>
+                  </div>
+                  <div class="card__overlay">
+                    <p class="card__overlay-text">Мы обеспечиваем нашим
+                      сотрудникам стабильную заработную плату в соответствии с
+                      рынком региона. Средний стаж работы в нашей компании – 7
+                      лет.</p>
+                  </div>
+                </div>
+              </li>
+              <li class="advantages__item swiper-slide">
+                <div class="advantages__card card">
+                  <picture class="card__image">
+                    <!-- WebP для больших экранов (1340px и выше) -->
+                    <source
+                      media="(min-width: 1340px)"
+                      srcset="
+                            ./img/advantages/care.webp 1x,
+                            ./img/advantages/care@2x.webp 2x"
+                      type="image/webp"
+                    >
+                    <source
+                      media="(min-width: 1340px)"
+                      srcset="
+                            ./img/advantages/care.jpg 1x,
+                            ./img/advantages/care@2x.jpg 2x"
+                      type="image/jpeg"
+                    >
+
+                    <!-- WebP для средних экранов (1020px и выше) -->
+                    <source
+                      media="(min-width: 1020px)"
+                      srcset="
+                            ./img/advantages/care-m.webp 1x,
+                             ./img/advantages/care-m@2x.webp 2x"
+                      type="image/webp"
+                    >
+                    <source
+                      media="(min-width: 1020px)"
+                      srcset="
+                            ./img/advantages/care-m.jpg 1x,
+                            ./img/advantages/care-m@2x.jpg 2x"
+                      type="image/jpeg"
+                    >
+                    <img src="./img/advantages/care.jpg"
+                         srcset="./img/advantages/care@2x.jpg 2x"
+                         alt="Видео-презентация" width="356"
+                         height="178" loading="lazy">
+                  </picture>
+                  <div class="card__content">
+                    <p>Заботимся о здоровье сотрудников</p>
+                  </div>
+                  <div class="card__button">
+                    <span class="card__button-icon"></span>
+                  </div>
+                  <div class="card__overlay">
+                    <p class="card__overlay-text">Каждый сотрудник в нашей
+                      компании обеспечен полисом добровольного медицинского
+                      страхования. Кроме того, на каждом заводе есть
+                      медицинский
+                      пункт для сотрудников. Осуществляется страхование от
+                      несчастных случаев с первого дня работы.
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li class="advantages__item swiper-slide">
+                <div class="advantages__card card ">
+                  <picture class="card__image">
+                    <!-- WebP для больших экранов (1340px и выше) -->
+                    <source
+                      media="(min-width: 1340px)"
+                      srcset="
+                            ./img/advantages/uniform.webp 1x,
+                            ./img/advantages/uniform@2x.webp 2x"
+                      type="image/webp"
+                    >
+                    <source
+                      media="(min-width: 1340px)"
+                      srcset="
+                            ./img/advantages/uniform.jpg 1x,
+                            ./img/advantages/uniform@2x.jpg 2x"
+                      type="image/jpeg"
+                    >
+
+                    <!-- WebP для средних экранов (1020px и выше) -->
+                    <source
+                      media="(min-width: 1020px)"
+                      srcset="
+                            ./img/advantages/uniform-m.webp 1x,
+                             ./img/advantages/uniform-m@2x.webp 2x"
+                      type="image/webp"
+                    >
+                    <source
+                      media="(min-width: 1020px)"
+                      srcset="
+                            ./img/advantages/uniform-m.jpg 1x,
+                            ./img/advantages/uniform-m@2x.jpg 2x"
+                      type="image/jpeg"
+                    >
+                    <img src="./img/advantages/uniform.jpg"
+                         srcset="./img/advantages/uniform@2x.jpg 2x"
+                         alt="Видео-презентация" width="356"
+                         height="178" loading="lazy">
+                  </picture>
+                  <div class="card__content">
+                    <p>Предоставление удобной спецодежды и СИЗ для
+                      производственного персонала</p>
+                  </div>
+                  <div class="card__button">
+                    <span class="card__button-icon"></span>
+                  </div>
+                  <div class="card__overlay">
+                    <p class="card__overlay-text">Мы предоставляем удобные СИЗ
+                      и
+                      спецодежду и в случае износа или порчи обмениваются на
+                      новые.
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li class="advantages__item swiper-slide">
+                <div class="advantages__card card">
+                  <picture class="card__image">
+                    <!-- WebP для больших экранов (1340px и выше) -->
+                    <source
+                      media="(min-width: 1340px)"
+                      srcset="
+                            ./img/advantages/training.webp 1x,
+                            ./img/advantages/training@2x.webp 2x"
+                      type="image/webp"
+                    >
+                    <source
+                      media="(min-width: 1340px)"
+                      srcset="
+                            ./img/advantages/training.jpg 1x,
+                            ./img/advantages/training@2x.jpg 2x"
+                      type="image/jpeg"
+                    >
+
+                    <!-- WebP для средних экранов (1020px и выше) -->
+                    <source
+                      media="(min-width: 1020px)"
+                      srcset="
+                            ./img/advantages/training-m.webp 1x,
+                             ./img/advantages/training-m@2x.webp 2x"
+                      type="image/webp"
+                    >
+                    <source
+                      media="(min-width: 1020px)"
+                      srcset="
+                            ./img/advantages/training-m.jpg 1x,
+                            ./img/advantages/training-m@2x.jpg 2x"
+                      type="image/jpeg"
+                    >
+                    <img src="./img/advantages/training.jpg"
+                         srcset="./img/advantages/training@2x.jpg 2x"
+                         alt="Видео-презентация" width="356"
+                         height="178" loading="lazy">
+                  </picture>
+                  <div class="card__content">
+                    <p>Обучение: различные программы обучения и
+                      профессиональные
+                      тренинги</p>
+                  </div>
+                  <div class="card__button">
+                    <span class="card__button-icon"></span>
+                  </div>
+                  <div class="card__overlay">
+                    <p class="card__overlay-text">Мы уделяем много внимания
+                      развитию наших сотрудников. В компании работает
+                      Внутренний
+                      центр обучений и ежегодно проводится большое количество
+                      обучающих мероприятий как локально на заводах, так и в
+                      головном офисе DuffBeer во Франции.
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li class="advantages__item swiper-slide">
+                <div class="advantages__card card">
+                  <picture class="card__image">
+                    <!-- WebP для больших экранов (1340px и выше) -->
+                    <source
+                      media="(min-width: 1340px)"
+                      srcset="
+                            ./img/advantages/possibility.webp 1x,
+                            ./img/advantages/possibility@2x.webp 2x"
+                      type="image/webp"
+                    >
+                    <source
+                      media="(min-width: 1340px)"
+                      srcset="
+                            ./img/advantages/possibility.jpg 1x,
+                            ./img/advantages/possibility@2x.jpg 2x"
+                      type="image/jpeg"
+                    >
+
+                    <!-- WebP для средних экранов (1020px и выше) -->
+                    <source
+                      media="(min-width: 1020px)"
+                      srcset="
+                            ./img/advantages/possibility-m.webp 1x,
+                             ./img/advantages/possibility-m@2x.webp 2x"
+                      type="image/webp"
+                    >
+                    <source
+                      media="(min-width: 1020px)"
+                      srcset="
+                            ./img/advantages/possibility-m.jpg 1x,
+                            ./img/advantages/possibility-m@2x.jpg 2x"
+                      type="image/jpeg"
+                    >
+                    <img src="./img/advantages/possibility.jpg"
+                         srcset="./img/advantages/possibility@2x.jpg 2x"
+                         alt="Видео-презентация" width="356"
+                         height="178" loading="lazy">
+                  </picture>
+                  <div class="card__content">
+                    <p>Возможности для реализации творческого потенциала</p>
+                  </div>
+                  <div class="card__button">
+                    <span class="card__button-icon"></span>
+                  </div>
+                  <div class="card__overlay">
+                    <p class="card__overlay-text">Мы ставим перед собой
+                      амбициозные и интересные цели, а реализация задач
+                      является
+                      командной работой сотрудников из различных
+                      подразделений.
+                      Мы также принимаем активное участие в работе над
+                      кросс-функциональными проектам с коллегами из других
+                      стран
+                      присутствия DuffBeer.
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li class="advantages__item swiper-slide">
+                <div class="advantages__card card">
+                  <picture class="card__image">
+                    <!-- WebP для больших экранов (1340px и выше) -->
+                    <source
+                      media="(min-width: 1340px)"
+                      srcset="
+                            ./img/advantages/family.webp 1x,
+                            ./img/advantages/family@2x.webp 2x"
+                      type="image/webp"
+                    >
+                    <source
+                      media="(min-width: 1340px)"
+                      srcset="
+                            ./img/advantages/family.jpg 1x,
+                            ./img/advantages/family@2x.jpg 2x"
+                      type="image/jpeg"
+                    >
+
+                    <!-- WebP для средних экранов (1020px и выше) -->
+                    <source
+                      media="(min-width: 1020px)"
+                      srcset="
+                            ./img/advantages/family-m.webp 1x,
+                             ./img/advantages/family-m@2x.webp 2x"
+                      type="image/webp"
+                    >
+                    <source
+                      media="(min-width: 1020px)"
+                      srcset="
+                            ./img/advantages/family-m.jpg 1x,
+                            ./img/advantages/family-m@2x.jpg 2x"
+                      type="image/jpeg"
+                    >
+                    <img src="./img/advantages/family.jpg"
+                         srcset="./img/advantages/family@2x.jpg 2x"
+                         alt="Видео-презентация" width="356"
+                         height="178" loading="lazy">
+                  </picture>
+                  <div class="card__content">
+                    <p>Мы - семейная компания и любим проводить время вместе
+                    </p>
+                  </div>
+                  <div class="card__button">
+                    <span class="card__button-icon"></span>
+                  </div>
+                  <div class="card__overlay">
+                    <p class="card__overlay-text">Ежегодно мы проводим
+                      корпоративные мероприятия не только для наших
+                      сотрудников,
+                      но и для семей наших сотрудников. А корпоративные
+                      подарки
+                      для детей сотрудников – наша добрая предновогодняя
+                      традиция.
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li class="advantages__item swiper-slide">
+                <div class="advantages__card card">
+                  <picture class="card__image">
+                    <!-- WebP для больших экранов (1340px и выше) -->
+                    <source
+                      media="(min-width: 1340px)"
+                      srcset="
+                            ./img/advantages/socially.webp 1x,
+                            ./img/advantages/socially@2x.webp 2x"
+                      type="image/webp"
+                    >
+                    <source
+                      media="(min-width: 1340px)"
+                      srcset="
+                            ./img/advantages/socially.jpg 1x,
+                            ./img/advantages/socially@2x.jpg 2x"
+                      type="image/jpeg"
+                    >
+
+                    <!-- WebP для средних экранов (1020px и выше) -->
+                    <source
+                      media="(min-width: 1020px)"
+                      srcset="
+                            ./img/advantages/socially-m.webp 1x,
+                             ./img/advantages/socially-m@2x.webp 2x"
+                      type="image/webp"
+                    >
+                    <source
+                      media="(min-width: 1020px)"
+                      srcset="
+                            ./img/advantages/socially-m.jpg 1x,
+                            ./img/advantages/socially-m@2x.jpg 2x"
+                      type="image/jpeg"
+                    >
+                    <img src="./img/advantages/socially.jpg"
+                         srcset="./img/advantages/socially@2x.jpg 2x"
+                         alt="Видео-презентация" width="356"
+                         height="178" loading="lazy">
+                  </picture>
+                  <div class="card__content">
+                    <p>Мы - социально ответственная компания и заботимся об
+                      окружающих
+                    </p>
+                  </div>
+                  <div class="card__button">
+                    <span class="card__button-icon"></span>
+                  </div>
+                  <div class="card__overlay">
+                    <p class="card__overlay-text">Наша миссия лежит в основе
+                      социально-корпоративной ответственности. Мы ведем свою
+                      деятельность в соответствии с тремя основными правилами:
+                      мы заботимся о людях; наша деятельность устойчива по
+                      своей
+                      природе; мы заботимся об окружающей среде.
+                    </p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="advantages__pagination swiper-pagination"></div>
+      </div>
+    </section>
+
+    <section class="global-player">
+      <div class="global-player__container container">
+        <div class="global-player__header">
+          <h2>DuffBeer</h2>
+          <p>Ключевой мировой игрок в&nbsp;области ферментации</p>
+        </div>
+        <div class="global-player__control">
+          <div class="global-player__arrows arrows" data-nojs="no-js">
+            <button class="global-player__arrows-prev arrows__prev">
+              <svg width="10" height="10"
+                   aria-label="Перейти к предыдущему слайду">
+                <use xlink:href="./img/sprite.svg#icon-arrow"></use>
+              </svg>
+            </button>
+            <button class="global-player__arrows-next arrows__next">
+              <svg width="10" height="10"
+                   aria-label="Перейти к следующему слайду">
+                <use xlink:href="./img/sprite.svg#icon-arrow"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="global-player__wrapper swiper">
+          <ul class="global-player__list swiper-wrapper">
+            <li
+              class="global-player__stat global-player__stat--big swiper-slide">
+
+              <picture class="global-player__stat-photo">
+                <!-- WebP для больших экранов (1340px и выше) -->
+                <source media="(min-width: 1340px)"
+                        srcset="./img/global-player/stats.webp 1x, ./img/global-player/stats@2x.webp 2x"
+                        type="image/webp">
+                <source media="(min-width: 1340px)"
+                        srcset="./img/global-player/stats.jpg 1x, ./img/global-player/stats@2x.jpg 2x"
+                        type="image/jpeg">
+                <!-- WebP для средних экранов (1020px и выше) -->
+                <source media="(min-width: 1020px)"
+                        srcset="./img/global-player/stats-m.webp 1x, ./img/global-player/stats-m@2x.webp 2x"
+                        type="image/webp">
+                <source media="(min-width: 1020px)"
+                        srcset="./img/global-player/stats-m.jpg 1x, ./img/global-player/stats-m@2x.jpg 2x"
+                        type="image/jpeg">
+                <img src="./img/global-player/stats.jpg"
+                     srcset="./img/global-player/stats.jpg 2x"
+                     alt="Видео-презентация" width="565" height="294"
+                     loading="lazy">
+              </picture>
+              <div class="global-player__stat-bottom">
+                        <span
+                          class="global-player__stat-number">10 700+ сотрудников</span>
+              </div>
+            </li>
+            <li
+              class="global-player__stat global-player__stat--small swiper-slide">
+              <picture class="global-player__stat-photo">
+                <img src="./img/global-player/expert.jpg"
+                     srcset="./img/global-player/expert@2x.jpg 2x"
+                     alt="Видео-презентация" width="294" height="240"
+                     loading="lazy">
+              </picture>
+              <div class="global-player__stat-bottom">
+                        <span
+                          class="global-player__stat-number">570 экспертов R&D</span>
+              </div>
+            </li>
+            <li
+              class="global-player__experience global-player__experience--small swiper-slide">
+                  <span class="global-player__experience-number">
+                    <svg width="162" height="73" aria-hidden="true">
+                      <use xlink:href="./img/sprite.svg#167"></use>
+                    </svg>
+                  </span>
+              <div class="global-player__experience-bottom">
+                <span class="global-player__experience-label">лет опыта<br>на рынке хлебопечения</span>
+              </div>
+            </li>
+            <li
+              class="global-player__experience global-player__experience--big swiper-slide">
+              <picture class="global-player__experience-photo">
+                <!-- WebP для больших экранов (1340px и выше) -->
+                <source media="(min-width: 1340px)"
+                        srcset="./img/global-player/experience.webp 1x, ./img/global-player/experience@2x.webp 2x"
+                        type="image/webp">
+                <source media="(min-width: 1340px)"
+                        srcset="./img/global-player/experience.jpg 1x, ./img/global-player/experience@2x.jpg 2x"
+                        type="image/jpeg">
+                <!-- WebP для средних экранов (1020px и выше) -->
+                <source media="(min-width: 1020px)"
+                        srcset="./img/global-player/experience-m.webp 1x, ./img/global-player/experience-m@2x.webp 2x"
+                        type="image/webp">
+                <source media="(min-width: 1020px)"
+                        srcset="./img/global-player/experience-m.jpg 1x, ./img/global-player/experience-m@2x.jpg 2x"
+                        type="image/jpeg">
+                <img src="./img/global-player/experience.jpg"
+                     srcset="./img/global-player/experience@2x.jpg 2x"
+                     alt="Видео-презентация" width="565" height="294"
+                     loading="lazy">
+              </picture>
+              <div class="global-player__experience-bottom">
+                    <span
+                      class="global-player__experience-number">25+ лет в России</span>
+              </div>
+            </li>
+            <li
+              class="global-player__direction global-player__direction--big swiper-slide">
+              <picture class="global-player__direction-photo">
+                <!-- WebP для больших экранов (1340px и выше) -->
+                <source media="(min-width: 1340px)"
+                        srcset="./img/global-player/branches.webp 1x, ./img/global-player/branches@2x.webp 2x"
+                        type="image/webp">
+                <source media="(min-width: 1340px)"
+                        srcset="./img/global-player/branches.jpg 1x, ./img/global-player/branches@2x.jpg 2x"
+                        type="image/jpeg">
+                <!-- WebP для средних экранов (1020px и выше) -->
+                <source media="(min-width: 1020px)"
+                        srcset="./img/global-player/branches-m.webp 1x, ./img/global-player/branches-m@2x.webp 2x"
+                        type="image/webp">
+                <source media="(min-width: 1020px)"
+                        srcset="./img/global-player/branches-m.jpg 1x, ./img/global-player/branches-m@2x.jpg 2x"
+                        type="image/jpeg">
+                <img src="./img/global-player/branches.jpg"
+                     srcset="./img/global-player/branches@2x.jpg 2x"
+                     alt="Видео-презентация" width="565" height="294"
+                     loading="lazy">
+              </picture>
+              <div class="global-player__direction-bottom">
+                <span class="global-player__direction-number">Филиалы в 50 странах</span>
+              </div>
+            </li>
+            <li
+              class="global-player__direction global-player__direction--small swiper-slide">
+                  <span class="global-player__direction-number">
+                    <svg width="59" height="77" aria-hidden="true">
+                      <use xlink:href="./img/sprite.svg#4"></use>
+                    </svg>
+                  </span>
+              <div class="global-player__direction-bottom">
+                <span class="global-player__direction-label">направления<br>деятельности</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="global-player__pagination swiper-pagination"></div>
+
+        <span class="global-player__bg-vector">
+          <svg width="260" height="416" aria-hidden="true">
+            <use xlink:href="./img/sprite.svg#global-vector-right"></use>
+          </svg>
+            </span>
+        <span class="global-player__bg-vector-mob">
+          <svg width="142" height="81" aria-hidden="true">
+            <use xlink:href="./img/sprite.svg#global-vector-right-mob"></use>
+            </svg>
+            </span>
+        <span class="global-player__bg-vector-left">
+          <svg width="293" height="368" aria-hidden="true">
+            <use xlink:href="./img/sprite.svg#global-vector-left"></use>
+          </svg>
+        </span>
+      </div>
+    </section>
+  </main>
+</div>
+<script src="js/main.min.js"></script>
+</body>
+</html>

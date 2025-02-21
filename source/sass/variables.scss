@@ -1,0 +1,110 @@
+// Colors
+// ---------------------------------
+
+// Default
+
+$color-primary: #0A3B93;
+$color-secondary: #6C5F4A;
+$color-accent: #8A7B60;
+$color-dark: #0A3B8E;
+$color-white: #FFFFFF;
+
+
+// Gradient
+
+
+// переменная используемая в html для подключения скейлинга
+$fz-default: 16px;
+
+$fz-small: 12px;
+$fz-lsmall: 13px;
+$fz-xsmall: 14px;
+$fz-xssmall: 15px;
+$fz-xxsmall: 16px;
+$fz-xxssmall: 17px;
+$fz-xxxsmall: 18px;
+$fz-medium: 20px;
+$fz-xmedium: 21px;
+$fz-xsmedium: 22px;
+$fz-xxmedium: 24px;
+$fz-xxsmedium: 25px;
+$fz-xxxmedium: 26px;
+$fz-sbig: 30px;
+$fz-big: 35px;
+$fz-lbig: 40px;
+$fz-large: 55px;
+$fz-xlarge: 56px;
+$fz-xxxllarge: 77px;
+
+// Line height
+// ---------------------------------
+$lh-small: 12px;
+$lh-lsmall: 13px;
+$lh-xsmall: 14px;
+$lh-xxsmall: 16px;
+$lh-xxxsmall: 18px;
+$lh-smedium: 20px;
+$lh-xmedium: 21px;
+$lh-xsmedium: 22px;
+$lh-xxmedium: 24px;
+$lh-xxsmedium: 25px;
+$lh-xxxmedium: 26px;
+$lh-xxlmedium: 28px;
+$lh-sbig: 30px;
+$lh-big: 35px;
+$lh-lbig: 40px;
+$lh-large: 55px;
+$lh-xlarge: 56px;
+$lh-xxxllarge: 77px;
+
+// Weight
+// ---------------------------------
+$fw-light: 300;
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-semi-bold: 600;
+$fw-bold: 700;
+$fw-extra-bold: 800;
+
+
+// у некоторых шрифтов в ios возникают проблемы с символом рубля
+// https://www.artlebedev.ru/kovodstvo/sections/159/#13
+$ff-arial: "Arial", sans-serif;
+$ff-lato: "Lato", "Arial", sans-serif;
+//$ff-montserrat: "Montserrat", "Arial", sans-serif;
+//$ff-placeholder: "Placeholder", "Arial", sans-serif;
+
+// Letter spacing
+
+$ls-light: 0.02em;
+$ls-medium: 0.03em;
+$ls-interium: 0.04em;
+
+// Animation
+// ---------------------------------
+
+$tf-default: ease;
+$trans-default: 0.3s $tf-default;
+
+// если требуется изинг отличный от $tf-default, то переменную называем не цифрой
+$trans-modal: 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+
+$trans-600: 0.6s $tf-default;
+
+// Viewports
+// ---------------------------------
+
+$vp-320: 320px;
+$vp-375: 375px;
+$vp-768: 768px;
+$vp-1024: 1024px;
+$vp-1200: 1200px;
+$vp-1280: 1280px;
+$vp-1440: 1440px;
+$vp-1920: 1920px;
+
+// Retina
+// ---------------------------------
+
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;
